@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Honey Do App</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF8E1;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #FF5722;
+            border-radius: 12px;
+            color: white;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .app-subtitle {
+            margin: 5px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        h2 {
+            color: #FF5722;
+            border-bottom: 2px solid #FFE082;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .warning-box {
+            background-color: #FFEBEE;
+            border: 2px solid #FF5722;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .form-section {
+            background-color: #F3F9FF;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #FFB300;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #FFB300;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: #FF5722;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #E64A19;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #FFB300;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            background-color: #FF8F00;
+        }
+        .last-updated {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 30px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .required {
+            color: #FF5722;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🗑️ Delete Account</h1>
+        <p class="app-subtitle">Honey Do App</p>
+    </div>
+
+    <div class="section">
+        <h2>Account Deletion Request</h2>
+        <p>We're sorry to see you go! If you'd like to delete your Honey Do account and all associated data, please fill out the form below.</p>
+    </div>
+
+    <div class="warning-box">
+        <h3>⚠️ Important Warning</h3>
+        <p><strong>Account deletion is permanent and cannot be undone.</strong> When you delete your account, we will permanently remove:</p>
+        <ul>
+            <li><strong>All your todo lists and items</strong></li>
+            <li><strong>Shared lists you created</strong> (other members will lose access)</li>
+            <li><strong>Your profile and settings</strong></li>
+            <li><strong>Notification preferences</strong></li>
+            <li><strong>Share codes and collaboration data</strong></li>
+            <li><strong>All app usage history</strong></li>
+        </ul>
+        <p><strong>Note:</strong> You will be removed from lists shared with you by other users, but those lists will remain active for other members.</p>
+    </div>
+
+    <div class="section">
+        <h2>Before You Delete</h2>
+        <p>Consider these alternatives:</p>
+        <ul>
+            <li><strong>Sign out:</strong> Simply sign out if you want a temporary break</li>
+            <li><strong>Export data:</strong> Contact us first if you need to export your lists</li>
+            <li><strong>Report issues:</strong> Let us know if there's a problem we can help solve</li>
+        </ul>
+    </div>
+
+    <div class="form-section">
+        <h2>Deletion Request Form</h2>
+        <form action="mailto:[YOUR_EMAIL_ADDRESS]" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required 
+                       placeholder="Enter the email associated with your Honey Do account">
+                <small>This must match the email address you used to sign up for Honey Do.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="user_id">User ID (if known)</label>
+                <input type="text" id="user_id" name="user_id" 
+                       placeholder="Your user ID (optional, helps us process faster)">
+                <small>You can find this in your app settings or profile section.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="reason">Reason for deletion (optional)</label>
+                <textarea id="reason" name="reason" 
+                          placeholder="Help us improve by telling us why you're leaving (optional)"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmation">Confirmation <span class="required">*</span></label>
+                <textarea id="confirmation" name="confirmation" required 
+                          placeholder="Type: I understand that deleting my account is permanent and cannot be undone. I want to permanently delete my Honey Do account and all associated data."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Deletion Request</button>
+        </form>
+
+        <p><strong>Alternative:</strong> You can also email us directly at <strong>[YOUR_EMAIL_ADDRESS]</strong> with your deletion request.</p>
+    </div>
+
+    <div class="section">
+        <h2>What Happens Next?</h2>
+        <ol>
+            <li><strong>We receive your request</strong> - We'll confirm receipt within 48 hours</li>
+            <li><strong>Identity verification</strong> - We may ask you to verify your identity for security</li>
+            <li><strong>Data deletion</strong> - We'll permanently delete your account and data within 30 days</li>
+            <li><strong>Confirmation</strong> - We'll send you a final confirmation when deletion is complete</li>
+        </ol>
+        <p><strong>Processing time:</strong> Most deletion requests are processed within 7-14 days.</p>
+    </div>
+
+    <div class="section">
+        <h2>Contact Information</h2>
+        <p>If you have questions about account deletion or our data practices:</p>
+        <ul>
+            <li><strong>Email:</strong> [YOUR_EMAIL_ADDRESS]</li>
+            <li><strong>Response time:</strong> Within 48 hours</li>
+            <li><strong>Privacy Policy:</strong> <a href="privacy-policy.html">View our privacy policy</a></li>
+        </ul>
+    </div>
+
+    <a href="privacy-policy.html" class="back-link">← Back to Privacy Policy</a>
+
+    <p class="last-updated">Last Updated: December 2024</p>
+
+    <script>
+        // Auto-fill the confirmation text when user clicks on the textarea
+        document.getElementById('confirmation').addEventListener('focus', function() {
+            if (this.value === '') {
+                this.value = 'I understand that deleting my account is permanent and cannot be undone. I want to permanently delete my Honey Do account and all associated data.';
+            }
+        });
+
+        // Form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const email = document.getElementById('email').value;
+            const confirmation = document.getElementById('confirmation').value;
+            const expectedText = 'I understand that deleting my account is permanent and cannot be undone. I want to permanently delete my Honey Do account and all associated data.';
+            
+            if (!email) {
+                alert('Please enter your email address.');
+                e.preventDefault();
+                return;
+            }
+            
+            if (confirmation.trim() !== expectedText) {
+                alert('Please enter the exact confirmation text as shown.');
+                e.preventDefault();
+                return;
+            }
+        });
+    </script>
+</body>
+</html>
